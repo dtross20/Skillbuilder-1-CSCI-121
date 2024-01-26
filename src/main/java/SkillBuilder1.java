@@ -9,7 +9,23 @@ import java.util.Scanner;
 public class SkillBuilder1 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+        String userString;
+        userString= input.nextLine();
+
+        //Spice Calculation
+        float spice;
+        spice = input.nextFloat();
+        double val = Math.pow(2.0,(Math.sqrt(5.0)/Math.pow(spice,3)))*(4.0/3.0);
+
         //TODO : Replace this comment with your code
+        System.out.println("You're Jane's friend!");
+        System.out.println("\"What's your name?\"");
+        System.out.println("Enter a floating-point number:");
+        System.out.println("Well " +userString + ", the spice value resulted in " + val);
+        System.out.println("And the converted value is " + (double)(val));
+
+
+
     }
 
     public static void calcWallPaint() {
