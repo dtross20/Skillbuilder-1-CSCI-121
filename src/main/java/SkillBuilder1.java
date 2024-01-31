@@ -22,7 +22,7 @@ public class SkillBuilder1 {
         System.out.println("\"What's your name?\"");
         System.out.println("Enter a floating-point number:");
         System.out.println("Well " +userString + ", the spice value resulted in " + val);
-        System.out.println("And the converted value is " + (double)(val));
+        System.out.println("And the converted value is " + (val));
 
 
 
@@ -43,9 +43,15 @@ public class SkillBuilder1 {
         double wallWidth = input.nextDouble();
 
         // TODO: Calculate and output the wall's area
+        double wallArea = wallWidth*wallHeight;
+        System.out.println("Wall area: "+wallArea +" square feet");
 
         // TODO: Calculate and output the amount of paint in gallons needed to paint the wall
-
+        double gallonsNeeded =wallArea/squareFeetPerGallons;
+        System.out.printf("Paint needed: %.2f gallons\n",gallonsNeeded);
         // TODO: Calculate and output the number of 1 gallon cans needed to paint the wall, rounded up to nearest integer
+        double gallonCansNeeded = (gallonsNeeded/gallonsPerCan);
+        System.out.printf("Cans needed: " +(int)Math.ceil(gallonCansNeeded) +" can(s)");
     }
+
 }
